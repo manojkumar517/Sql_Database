@@ -1,0 +1,39 @@
+ create database payroll_service;
+ 
+ show databases;
++--------------------+
+| Database           |
++--------------------+
+| bridgelabz         |
+| employee           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| samdb              |
+| school             |
+| storedigram        |
+| sys                |
++--------------------+
+
+ use payroll_service;
+ 
+ CREATE Table employee_payroll(id INT NOT NULL PRIMARY KEY, name varchar(100) NOT NULL, 
+ salary int NOT NULL, start_date varchar(10) NOT NULL);
+ 
+  insert into employee_payroll (id, name, salary, start_date) values(1, "samadhan", 1000, "20/4/12");
+  insert into employee_payroll values(3, "sharad", 2500, "2/5/10"),
+  (4, "shubham", 2700, "12/09/20"),
+  (5, "ajay", 4500, "20/08/10");
+  
+   select * from employee_payroll;
+   
+    SELECT salary, name FROM employee_payroll where name = 'samadhan';
+	SELECT salary, name FROM employee_payroll where id = 3;
+	
+	WHERE start BETWEEN CAST('2018-01-01' AS DATE) AND DATE(NOW());
+	
+	ALTER TABLE employee payroll ADD gender CHAR(1) AFTER name;
+	
+	ALTER TABLE employee payroll DROP gender;
+
+	DROP DATABASE payroll service;
